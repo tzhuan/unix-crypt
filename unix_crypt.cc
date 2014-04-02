@@ -2,17 +2,11 @@
 #include <v8.h>
 
 extern "C" {
-#ifdef _XOPEN_SOURCE
   #include <unistd.h>
-#endif
-#ifdef _GNU_SOURCE
-  #include <crypt.h>
-#endif
 }
 
 using namespace v8;
 
-#ifdef _XOPEN_SOURCE
 Handle<Value> crypt(const Arguments& args) {
   HandleScope scope;
   if (args.Length() < 2) {
@@ -28,15 +22,12 @@ Handle<Value> crypt(const Arguments& args) {
     *String::AsciiValue(args[1])
   )));
 }
-#endif
 
 void init(Handle<Object> exports) {
-#ifdef _XOPEN_SOURCE
   exports->Set(
     String::NewSymbol("crypt"),
     FunctionTemplate::New(crypt)->GetFunction()
   );
-#endif
 }
 
 NODE_MODULE(unix_crypt, init)
