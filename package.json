@@ -1,19 +1,19 @@
 {
-  "name" : "unix-crypt",
-  "version" : "0.1.0",
-  "description" : "Native Node.js C extension for UNIX crypt(3).",
-  "homepage" : "https://github.com/tzhuan/unix-crypt",
-  "author" : { 
-    "name" : "Tz-Huan Huang",
-    "email" : "tzhuan@gmail.com"
+  "name": "unix-crypt",
+  "version": "0.1.0",
+  "description": "Native Node.js C extension for UNIX crypt(3).",
+  "homepage": "https://github.com/tzhuan/unix-crypt",
+  "author": { 
+    "name": "Tz-Huan Huang",
+    "email": "tzhuan@gmail.com"
   },
-  "repository" : { 
-    "type" : "git",
-    "url" : "https://github.com/tzhuan/unix-crypt.git"
-  }
-  "scripts" : {
-    "preinstall" : "node-gyp configure build",
-    "preuninstall" : "node-gyp clean"
-  }
+  "repository": { 
+    "type": "git",
+    "url": "git://github.com/tzhuan/unix-crypt.git"
+  },
+  "scripts": {
+    "preinstall": "node-gyp configure build",
+    "preuninstall": "node-gyp clean"
+  },
   "main": "build/release/unix_crypt.node"
 }
