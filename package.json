@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git://github.com/tzhuan/unix-crypt.git"
   },
+  "dependencies": {
+    "bindings": "1.0.x"
+  },
   "scripts": {
     "preinstall": "node-gyp configure build",
     "preuninstall": "node-gyp clean"
