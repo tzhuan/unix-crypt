@@ -15,5 +15,5 @@
     "preinstall": "node-gyp configure build",
     "preuninstall": "node-gyp clean"
   },
-  "main": "build/release/unix_crypt.node"
+  "main": "./unix-crypt"
 }
